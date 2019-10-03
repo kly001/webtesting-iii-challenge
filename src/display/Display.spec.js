@@ -6,6 +6,6 @@ import "react-testing-library/cleanup-after-each";
 
 import Display from "./Display";
 
-test("Display without crashing", () => {
+test("Display renders without crashing", () => {
     render(<Display />)
 })

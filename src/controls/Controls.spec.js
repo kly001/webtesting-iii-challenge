@@ -7,6 +7,6 @@ import "react-testing-library/cleanup-after-each";
 
 import Controls from "./Controls"
 
-test("Controls without crashing", () => {
+test("Controls renders without crashing", () => {
     render(<Controls />)
 })

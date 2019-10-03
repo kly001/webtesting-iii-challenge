@@ -6,6 +6,6 @@ import "react-testing-library/cleanup-after-each";
 
 import Dashboard from "./Dashboard"
 
-test("Dashboard without crashing", () => {
+test("Dashboard renders without crashing", () => {
     render(<Dashboard />)
 })
