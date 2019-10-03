@@ -7,6 +7,10 @@ import "react-testing-library/cleanup-after-each";
 import Dashboard from "./Dashboard";
 
 
+// ### Dashboard
+
+// - shows the controls and display
+
 test("Dashboard renders without crashing", () => {
     render(<Dashboard />)
 })
@@ -14,8 +18,9 @@ test("Dashboard renders without crashing", () => {
 
 test(" shows controls and display", () => {
     const {getByText} = render(<Dashboard />)
-    getByText(/Open/)
-    getByText(/Unlocked/)
-    getByText(/Lock Gate/)
-    getByText(/Close Gate/)
+    getByText(/open/i)
+    getByText(/unlocked/i)
+    getByText(/lock gate/i)
+    getByText(/close gate/i)
 })
+
