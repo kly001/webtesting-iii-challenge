@@ -11,8 +11,11 @@ test("Dashboard renders without crashing", () => {
     render(<Dashboard />)
 })
 
-test("shows the controls", () => {
-    const {getByText} = render(<Dashboard />);
-    getByText(/locked/i)
-})
 
+test(" shows controls and display", () => {
+    const {getByText} = render(<Dashboard />)
+    getByText(/Open/)
+    getByText(/Unlocked/)
+    getByText(/Lock Gate/)
+    getByText(/Close Gate/)
+})

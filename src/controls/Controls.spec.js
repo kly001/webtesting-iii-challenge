@@ -10,3 +10,4 @@ import Controls from "./Controls"
 test("Controls renders without crashing", () => {
     render(<Controls />)
 })
+
