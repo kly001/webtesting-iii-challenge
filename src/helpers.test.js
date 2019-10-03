@@ -8,9 +8,9 @@ describe("helper module", () => {
                 expect(actualOutput).toBe(expectedOutput)
         })
 
-        it("can find the sum of three numbers", () => {
-            const expectedOutput = 13;
-            const actualOutput = help.sum(8,5);
+        it("can find the sum of seven numbers", () => {
+            const expectedOutput = 28;
+            const actualOutput = help.sum(1,2,3,4,5,6,7);
             expect(actualOutput).toBe(expectedOutput)
     })
 
