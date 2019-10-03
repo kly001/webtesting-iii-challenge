@@ -11,6 +11,10 @@ import Dashboard from "./Dashboard";
 
 // - shows the controls and display
 
+test("should match snapshot", () => {
+    expect(render(<Dashboard />)).toMatchSnapshot();
+})
+
 test("Dashboard renders without crashing", () => {
     render(<Dashboard />)
 })
