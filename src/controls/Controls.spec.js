@@ -18,3 +18,18 @@ test("Controls renders without crashing", () => {
     render(<Controls />)
 })
 
+test("provide buttons to toggle state", () => {
+
+})
+
+test("button text changes to reflect state", () => {
+
+})
+
+test("closed toggle disabled when gate is locked", () => {
+
+})
+
+test("locked toggle disabled when gate is open", () => {
+    
+})
