@@ -28,3 +28,9 @@ test(" shows controls and display", () => {
     getByText(/close gate/i)
 })
 
+test("it is mocking me", () => {
+    const mock = jest.fn();
+    mock("smile")
+    expect(mock).toHaveBeenCalled()
+})
+
