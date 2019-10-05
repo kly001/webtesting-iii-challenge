@@ -1,6 +1,6 @@
 // Test away!
 import React from "react";
-import {render} from "@testing-library/react";
+import {render, fireEvent} from "@testing-library/react";
 import "jest-dom/extend-expect";
 import "react-testing-library/cleanup-after-each";
 
@@ -18,16 +18,18 @@ test("Controls renders without crashing", () => {
     render(<Controls />)
 })
 
-// test("provide buttons to toggle state", () => {
-
-// })
+test("provide buttons to toggle state", () => {
+    const {getByText} = render (<Controls />)
+    getByText(/close gate/i)
+    getByText(/lock gate/i)
+})
 
 // test("button text changes to reflect state", () => {
 
 // })
 
 // test("closed toggle disabled when gate is locked", () => {
-
+ 
 // })
 
 // test("locked toggle disabled when gate is open", () => {

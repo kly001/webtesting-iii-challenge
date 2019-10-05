@@ -18,6 +18,11 @@ test("display renders without crashing", () => {
     render(<Display />)
 })
 
+test("should match snapshot", () => {
+    expect(render(<Display />)).toMatchSnapshot();
+})
+
+
 test("should default to unlocked and open", () => {
     const {getByText} = render(<Display />);
     const unlocked = getByText(/unlocked/i);
@@ -26,6 +31,8 @@ test("should default to unlocked and open", () => {
     expect(unlocked).toHaveClass("green-led")
     expect(open).toHaveClass("green-led")
  })
+
+
 test("when `locked` or `closed` use the `red-led` class", () => {
     const {getByText} = render(<Display closed={true} locked={true}/>);
     const closed = getByText(/closed/i);
@@ -34,11 +41,22 @@ test("when `locked` or `closed` use the `red-led` class", () => {
     expect(closed).toHaveClass("red-led")
     expect(locked).toHaveClass("red-led")
 })
+
+
 test("when `unlocked` or `open` use the `green-led` class", () => {
     const {getByText} = render(<Display closed={false} locked={false}/>);
     const open = getByText(/open/i);
     const unlocked = getByText(/unlocked/i)
 
     expect(open).toHaveClass("green-led")
+    expect(unlocked).toHaveClass("green-led")
+})
+
+test("when'unlocked' use the 'green-led' class and 'closed' use the  'red-led' class", () => {
+    const {getByText} = render(<Display closed={true} locked={false}/>);
+    const closed = getByText(/closed/i);
+    const unlocked = getByText(/unlocked/i)
+
+    expect(closed).toHaveClass("red-led")
     expect(unlocked).toHaveClass("green-led")
 })
