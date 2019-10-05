@@ -29,7 +29,7 @@ test("provide buttons to toggle state", () => {
 // })
 
 // test("closed toggle disabled when gate is locked", () => {
- 
+
 // })
 
 // test("locked toggle disabled when gate is open", () => {
